@@ -124,11 +124,11 @@
   <header>
     <h1>📘 문근영의 포트폴리오</h1>
     <nav>
-      <a href="#" onclick="showPage('home')">홈</a>
-      <a href="#" onclick="showPage('intro')">자기소개</a>
-      <a href="#" onclick="showPage('awards')">수상경력</a>
-      <a href="#" onclick="showPage('certificates')">자격증</a>
-      <a href="#" onclick="showPage('github')">깃허브</a>
+        <a href="#" onclick="showPage(event, 'home')">홈</a>
+        <a href="#" onclick="showPage(event, 'intro')">자기소개</a>
+        <a href="#" onclick="showPage(event, 'awards')">수상경력</a>
+        <a href="#" onclick="showPage(event, 'certificates')">자격증</a>
+        <a href="#" onclick="showPage(event, 'github')">깃허브</a>
     </nav>
   </header>
 
@@ -159,7 +159,7 @@
     <!-- 자기소개 -->
     <section id="intro">
       <div class="intro">
-        <img src="TalkMedia_i_f4252ac988da.jpeg" alt="">
+        <img src="image.png" alt="">
         <div class="intro-text">
           <h2>안녕하세요, 충주상업고등학교 문근영입니다. 😊</h2>
           <p>
@@ -201,13 +201,13 @@
         <div class="card">
           <h2>📁 포트폴리오 웹사이트</h2>
           <p>HTML, CSS, JavaScript로 만든 이 포트폴리오 웹입니다.</p>
-          <a href="https://github.com/yourusername/portfolio" target="_blank">🔗 GitHub 보기</a>
+          <a href="https://github.com/MKY1700?tab=repositories" target="_blank">🔗 GitHub 보기</a>
         </div>
-        <div class="card">
-          <h2>📝 미니 블로그</h2>
-          <p>간단한 게시판과 글쓰기 기능이 있는 미니 블로그 프로젝트입니다.</p>
-          <a href="https://github.com/yourusername/mini-blog" target="_blank">🔗 GitHub 보기</a>
-        </div>
-        <div class="card">
-          <h2>📊 데이터 시각화</h2>
-          <p>JavaScript의 Chart.js를 사용해 데이터를 시각화한 예제입니다.</p>
+<script>
+  function showPage(event, pageId) {
+    event.preventDefault(); // 기본 링크 동작 방지
+    const sections = document.querySelectorAll("section");
+    sections.forEach(sec => sec.classList.remove("active"));
+    document.getElementById(pageId).classList.add("active");
+  }
+</script>
