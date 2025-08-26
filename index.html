@@ -119,6 +119,36 @@
     .intro-text p {
       line-height: 1.6;
     }
+    .contact-info {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid #eee;
+      font-size: 1.1em;
+    }
+    .contact-label {
+      flex: 0 0 120px;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+    .contact-value {
+      flex: 1;
+    }
+    .contact-item a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -130,6 +160,7 @@
         <a href="#" onclick="showPage(event, 'awards')">수상경력</a>
         <a href="#" onclick="showPage(event, 'certificates')">자격증</a>
         <a href="#" onclick="showPage(event, 'github')">깃허브</a>
+        <a href="#" onclick="showPage(event, 'contact')">연락처</a>
     </nav>
   </header>
 
@@ -203,6 +234,27 @@
           <p>HTML, CSS, JavaScript로 만든 이 포트폴리오 웹입니다.</p>
           <a href="https://github.com/MKY1700?tab=repositories" target="_blank">🔗 GitHub 보기</a>
         </div>
+    </section>
+
+    <!-- 연락처 -->
+    <section id="contact">
+      <h2>📞 연락처</h2>
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-label">📧 이메일</div>
+          <div class="contact-value"><a href="mailto:a64051700@gmail.com">a64051700@gmail.com</a></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">📱 연락처</div>
+          <div class="contact-value">010-6405-1700</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-label">🏠 주소</div>
+          <div class="contact-value">충북 충주시 사직로 114(문화동 호수마을아파트 101동 1504호)</div>
+        </div>
+      </div>
+    </section>
+
 <script>
   function showPage(event, pageId) {
     event.preventDefault(); // 기본 링크 동작 방지
