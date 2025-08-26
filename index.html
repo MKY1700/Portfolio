@@ -149,6 +149,27 @@
     .contact-item a:hover {
       text-decoration: underline;
     }
+    .certificate-table {
+      width: 100%;
+      margin-top: 20px;
+      border-collapse: collapse;
+      text-align: left;
+    }
+    .certificate-table th, .certificate-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #ddd;
+    }
+    .certificate-table thead th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+      color: #333;
+    }
+    .certificate-table tbody tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    .certificate-table tbody tr:hover {
+      background-color: #f1f1f1;
+    }
   </style>
 </head>
 <body>
@@ -217,9 +238,32 @@
     <!-- 자격증 -->
     <section id="certificates">
       <h2>📜 자격증</h2>
-      <p>ITQ 엑셀 B - 2023.06.29<br><br>
-         ITQ 한글 A - 2023.06.29<br><br>
-         한국사 3급 - 2023.02.24</p>
+      <table class="certificate-table">
+        <thead>
+          <tr>
+            <th>취득일자</th>
+            <th>자격증명</th>
+            <th>발급기관</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2023.06.29</td>
+            <td>ITQ 엑셀 B</td>
+            <td>한국생산성본부(KPC)</td>
+          </tr>
+          <tr>
+            <td>2023.06.29</td>
+            <td>ITQ 한글 A</td>
+            <td>한국생산성본부(KPC)</td>
+          </tr>
+          <tr>
+            <td>2023.02.24</td>
+            <td>한국사능력검정시험 3급</td>
+            <td>국사편찬위원회</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
 
     <!-- 깃허브 -->
